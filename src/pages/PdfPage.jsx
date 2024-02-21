@@ -1,16 +1,14 @@
 import {
   Document,
+  Image,
   PDFViewer,
   Page,
   Text,
   View,
-  Image,
 } from "@react-pdf/renderer";
-import { useAppContext } from "../context/useAppContext";
 import logo from "../assets/LOGO.jpg";
 
 const PdfPage = () => {
-  const { test } = useAppContext();
   return (
     <PDFViewer style={{ width: "100%", height: "100vh" }}>
       <Document>
@@ -81,16 +79,16 @@ const PdfPage = () => {
               style={{
                 display: "flex",
                 flexDirection: "row",
-                justifyContent: "space-around",
+                margin: "10px",
               }}
             >
-              <View style={{ border: "1px" }}>
+              <View style={{ border: "1px", width: "40%" }}>
                 <Text>test</Text>
               </View>
-              <View style={{ border: "1px", width: "50px" }}>
+              <View style={{ border: "1px", width: "20%" }}>
                 <Text>test</Text>
               </View>
-              <View style={{ border: "1px" }}>
+              <View style={{ border: "1px", width: "40%" }}>
                 <Text>test</Text>
               </View>
             </View>
